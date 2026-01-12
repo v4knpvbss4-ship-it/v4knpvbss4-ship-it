@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meteor Dodge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div>
+          <h1>Meteor Dodge</h1>
+          <p>Move left/right to dodge the meteors. Survive as long as you can!</p>
+        </div>
+        <div class="hud">
+          <div class="hud-item">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="hud-item">
+            <span>Best</span>
+            <strong id="best">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="game-panel">
+        <canvas id="game" width="480" height="640" aria-label="Meteor Dodge game"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-card">
+            <h2 id="overlay-title">Ready?</h2>
+            <p id="overlay-message">Use ⬅️ ➡️ or A / D to move. Space to boost.</p>
+            <button id="start-button" class="primary">Start Run</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <div>
+          <span>Controls:</span>
+          <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd>
+        </div>
+        <div>
+          <span>Boost:</span>
+          <kbd>Space</kbd>
+        </div>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
